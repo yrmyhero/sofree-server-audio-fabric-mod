@@ -1,0 +1,37 @@
+{
+	"schemaVersion": 1,
+	"id": "sofree-server-audio-fabric-mod",
+	"version": "${version}",
+	"name": "sofree server audio fabric mod",
+	"description": "To increase your server's audio fun!",
+	"authors": [
+		"yrmyhero"
+	],
+	"contact": {
+		"sources": "https://github.com/yrmyhero/sofree-server-audio-fabric-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/sofree-server-audio-fabric-mod/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"sofree.audio.SofreeServerAudioFabricMod"
+		],
+		"client": [
+			"sofree.audio.client.SofreeServerAudioFabricModClient"
+		]
+	},
+	"mixins": [
+		"sofree-server-audio-fabric-mod.mixins.json",
+		{
+			"config": "sofree-server-audio-fabric-mod.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.19.3",
+		"minecraft": "~26.2",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
+}
